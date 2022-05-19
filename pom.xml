@@ -46,7 +46,7 @@
         <configuration>
           <scanIntervalSeconds>10</scanIntervalSeconds>
           <webApp>
-            <contextPath>/web</contextPath>
+            <contextPath>/WebAppVentas</contextPath>
           </webApp>
           <httpConnector>
             <port>8889</port>

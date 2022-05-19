@@ -13,20 +13,10 @@ public class ServletProductos extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter out;
-        String title = "Simple Servlet Output";
-
-        // primero selecciona el tipo de contenidos y otros campos de cabecera de la respuesta
-        resp.setContentType("text/html");
-        // Luego escribe los datos de la respuesta
-        out = resp.getWriter();
-        out.println("<HTML><HEAD><TITLE>");
-        out.println(title);
-        out.println("</TITLE></HEAD><BODY>");
-        out.println("<H1>" + title + "</H1>");
-        out.println("<P>This is output from SimpleServlet!");
-        out.println("</BODY></HTML>");
-        out.close();
+        resp.setCharacterEncoding("UTF-8");
+        req.setAttribute("esAccedidoAtravesDeServlet", true);
+        req.setAttribute("menuActive", "productos");
+        req.getRequestDispatcher("paginas/productos.jsp").forward(req, resp);
     }
 
     @Override

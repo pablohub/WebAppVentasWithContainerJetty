@@ -1,5 +1,10 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<%
+    String url = request.getRequestURL().toString();
+    String baseURL = url.substring(0, url.length() - request.getRequestURI().length()) + request.getContextPath() + "/";
+    response.sendRedirect(baseURL + "productos");
+
+%>
 </body>
 </html>
