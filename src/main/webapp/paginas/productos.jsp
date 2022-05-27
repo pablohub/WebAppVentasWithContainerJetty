@@ -14,6 +14,8 @@
 
         <div class="row mt-5">
             Productos
+            <button type="button" id="btnConsultar">Consultar</button>
         </div>
 
+<script type="text/javascript" src="<%=baseURL%>public/js/producto.js"></script>
 <jsp:include page="../layouts/pie.jsp" />

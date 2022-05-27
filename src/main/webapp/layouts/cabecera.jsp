@@ -9,9 +9,11 @@
     <head>
     <meta charset="utf-8">
     <title>Sistema Ventas</title>
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="<%=baseURL%>public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<%=baseURL%>public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <meta name="baseURL" content="<%=baseURL%>">
+    <script type="text/javascript" src="<%=baseURL%>public/js/config.js"></script>
     </head>
     <body>
 

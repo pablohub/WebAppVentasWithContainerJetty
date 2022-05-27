@@ -8,6 +8,18 @@ public class Producto {
     private int stock;
     private String url_img;
 
+    public Producto() {
+        this.url_img = "default.png";
+    }
+
+    public Producto(int id_producto, String descripcion, double precio, int stock) {
+        this.id_producto = id_producto;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.stock = stock;
+        this.url_img = "default.png";
+    }
+
     public int getId_producto() {
         return id_producto;
     }
