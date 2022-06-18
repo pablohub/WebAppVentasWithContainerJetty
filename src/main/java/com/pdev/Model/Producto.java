@@ -2,6 +2,7 @@ package com.pdev.Model;
 
 public class Producto {
 
+    private static int count = 0;
     private int id_producto;
     private String descripcion;
     private double precio;
@@ -9,6 +10,15 @@ public class Producto {
     private String url_img;
 
     public Producto() {
+        setId_producto(++count);
+        this.url_img = "default.png";
+    }
+
+    public Producto(String descripcion, double precio, int stock) {
+        setId_producto(++count);
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.stock = stock;
         this.url_img = "default.png";
     }
 
