@@ -17,9 +17,9 @@ public class ServletClientes extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setCharacterEncoding("UTF-8");
         String opcion = req.getParameter("opcion");
         if(Helper.isNullOrEmpty(opcion)){
-            resp.setCharacterEncoding("UTF-8");
             req.setAttribute("esAccedidoAtravesDeServlet", true);
             req.setAttribute("menuActive", "clientes");
             req.getRequestDispatcher("paginas/clientes.jsp").forward(req, resp);
@@ -30,7 +30,6 @@ public class ServletClientes extends HttpServlet {
             int id_cliente = Helper.toInt(strId_cliente);
             editar(resp, id_cliente);
         }else{
-            resp.setCharacterEncoding("UTF-8");
             req.setAttribute("esAccedidoAtravesDeServlet", true);
             req.setAttribute("menuActive", "clientes");
             req.getRequestDispatcher("paginas/clientes.jsp").forward(req, resp);

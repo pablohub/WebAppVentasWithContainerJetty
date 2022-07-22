@@ -16,9 +16,10 @@ public class ProveedorDAO {
     }
 
     private static void loadExampleData(){
-        listaProveedores.add(new Proveedor("20365897854", "IDAT", "Corporación IDAT"));
-        listaProveedores.add(new Proveedor("23056889658", "UTP", "Universidad Tecnológica del Perú"));
-        listaProveedores.add(new Proveedor("20369854753", "GMS", "General Modified South"));
+        listaProveedores.add(new Proveedor("20454713061", "CONSORCIO JM S.A.C.", "-"));
+        listaProveedores.add(new Proveedor("20601208416", "GALVASA S.R.L.", "-"));
+        listaProveedores.add(new Proveedor("20447720354", "CORPORACION CRUNA S.R.L.", "-"));
+        listaProveedores.add(new Proveedor("20600764111", "GRUPO ADEX S.A.C.", "GRUPO SUPERVISA DG"));
     }
 
     public static List<Proveedor> listar() { return listaProveedores; }

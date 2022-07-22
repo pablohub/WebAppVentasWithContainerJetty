@@ -19,9 +19,9 @@ public class ServletProductos extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setCharacterEncoding("UTF-8");
         String opcion = req.getParameter("opcion");
         if(Helper.isNullOrEmpty(opcion)){
-            resp.setCharacterEncoding("UTF-8");
             req.setAttribute("esAccedidoAtravesDeServlet", true);
             req.setAttribute("menuActive", "productos");
             req.getRequestDispatcher("paginas/productos.jsp").forward(req, resp);
@@ -32,7 +32,6 @@ public class ServletProductos extends HttpServlet {
             int id_producto = Helper.toInt(strId_producto);
             editar(resp, id_producto);
         }else{
-            resp.setCharacterEncoding("UTF-8");
             req.setAttribute("esAccedidoAtravesDeServlet", true);
             req.setAttribute("menuActive", "productos");
             req.getRequestDispatcher("paginas/productos.jsp").forward(req, resp);
